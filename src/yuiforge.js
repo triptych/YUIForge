@@ -1,15 +1,10 @@
-var express = require('express'),
-    app = express();
-
-
-app.use('/js', express.static(__dirname + '/js') );
-
-
-app.get('/', function(req,res) {
-	res.sendfile('yuiforge.html');
-	console.log("Sent yuiforge.html");
-
-});
-
-
-app.listen(process.env.PORT || 3000);
+<html>
+	<head>
+		<title>YUIForge v0.01</title>
+        <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+        <script src="/src/js/forge.js"></script>
+	</head>
+    <body>
+        <h1>YUIForge will be here!!</h1>
+    </body>
+</html>
