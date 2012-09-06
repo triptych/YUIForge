@@ -11,5 +11,13 @@ app.get('/', function(req,res) {
 
 });
 
+// all other requests are handled by redirecting the browser back to the
+// root path and tacking on the URL's path as the fragment;
+// e.g. "/foo/" => "/#/foo/".
+
+app.get('*', function (req, res){
+	res.redirect(302, "/#" + req.url);
+});
+
 
 app.listen(process.env.PORT || 3000);
