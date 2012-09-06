@@ -2,7 +2,7 @@ var express = require('express'),
     app = express();
 
 
-app.use('/js', express.static(__dirname + '/js') );
+app.use('/javascript', express.static(__dirname + '/javascript') );
 
 
 app.get('/', function(req,res) {
