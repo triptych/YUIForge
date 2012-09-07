@@ -1,0 +1,47 @@
+/**
+ * CSS Flexible Layout Module - flexbox styling
+ */
+
+* { transition: all 2s; }
+body {
+	background: #bfbfbf;
+}
+
+header,aside,.mainContent,.extraDiv,footer {
+	padding: 1em;
+	font-size: 1.4em;
+}
+header {
+	background-color: blue;
+	padding: 1em;
+}
+.wrapper {
+	display: flex;
+}
+aside {
+	background-color: orange;
+	width: 20%;
+	order: 2;
+}
+.content {
+	background-color: white;
+	flex:1;
+	order: 3;
+}
+.extraDiv {
+	background-color: pink;
+	width: 20%;
+	order: 1;
+}
+footer {
+	background-color: green;
+	clear: both;
+}
+@media all and (max-width: 500px) {
+	/* change below 500px */
+	.wrapper { flex-flow: column; }
+	.mainContent, aside, .extraDiv {
+		/* Return them to document order */
+		order: 0; width: auto;
+	}
+}
