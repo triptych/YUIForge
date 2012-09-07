@@ -3,6 +3,7 @@ var express = require('express'),
 
 
 app.use('/javascript', express.static(__dirname + '/javascript') );
+app.use('/css', express.static(__dirname + '/css') );
 
 
 app.get('/', function(req,res) {
